@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Saiba o clima da sua cidade local ou qualquer local do mundo!">
+        <meta property="og:image" content="https://nandins-12.github.io/search-clima/assets/preview.jpg">
+        <title>Search Clima</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/a0ff39b37d.js" crossorigin="anonymous"></script>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <!-- JavaScript -->
+        <script defer src="scripts/app.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="input-group">
+                <input type="text" id="search" placeholder="Pesquise o clima da sua cidade">
+                <button type="button" id="get_search">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                </button>
+            </div>
+            <p>Veja o clima de algumas das cidades mais populares do mundo.</p>
+            <nav class="cities">
+                <ul>
+                    <li>Paris</li>
+                    <li>New York</li>
+                    <li>Tokyo</li>
+                    <li>Miami</li>
+                </ul>
+            </nav>
+            <div id="area-data">
+                <h1>Informações adicionais</h1>
+                <nav>
+                    <ul>
+                        <li class="wind">Vento: <span>0</span>Km/h</li>
+                        <li class="humidity">Umidade: <span>0</span>%</li>
+                        <li class="cloud">Nuvens: <span>0</span>%</li>
+                        <li class="feelslike">Sensação Térmica: <span>0</span>C°</li>
+                    </ul>
+                </nav>
+                <p>&copy;Desenvolvido por Fernando Dias</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="area-resume">
+                <div class="container">
+                    <div>
+                        <h1 class="city-name"></h1>
+                        <h2 class="region"></h2>
+                        <p>Horário local <span class="localtime"></span></p>
+                        <div class="climate">
+                            <p>
+                                <span id="temp"></span>°C
+                                <span id="condition"></span>
+                            </p>
+                            <img id="climate-icon" src="" alt="">
+                        </div>
+                    </div>
+                    <p class="logo">SearchClima</p>
+                </div>
+                <div class="slide-down">
+                    <i id="slide_down" class="fa-solid fa-angles-down"></i>
+                </div>
+            </section>
+        </main>
+
+        <iframe id="background_image" src="background.html"></iframe>
+    </body>
+</html>

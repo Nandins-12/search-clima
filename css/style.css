@@ -1,0 +1,212 @@
+/* global -----------------------------*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+}
+
+#background_image {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+}
+
+#background_image {
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header --------------------------------------- */
+header {
+    padding: 6px;
+    background: rgba(110, 110, 110, 0.25);
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: -6px 2px 90px #000;
+}
+
+header .input-group {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 6px;
+    margin-bottom: 6px;
+}
+
+header .input-group input {
+    background: rgba(0, 0, 0, 0.2);
+    text-indent: 10px;
+    height: 2em;
+    color: #fff;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    font-size: 1.025em;
+    font-weight: lighter;
+    font-style: italic;
+    border-radius: 2px;
+}
+
+header .input-group input:focus {
+    border: 1px solid #fff;
+}
+
+header .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header .input-group button {
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+header .input-group button:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+header .input-group button i {
+    font-size: 1.4em;
+}
+
+header p {
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 6px;
+    font-weight: lighter;
+}
+
+header nav {
+    margin: 6px;
+}
+
+header nav ul li:first-child {
+    border: none;
+}
+
+header nav ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    height: 36px;
+    line-height: 36px;
+    font-size: 1.1em;
+    color: #fff;
+    cursor: default;
+    font-weight: 300;
+}
+
+header nav ul li:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Area Resume ----------------------------- */
+#area-resume {
+    padding: 60px 50px 30px 50px;
+    height: calc(100vh - 224px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#area-resume .container {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+#area-resume .logo {
+    margin-top: 14px;
+    text-decoration: underline;
+    cursor: default;
+}
+
+.region, .localtime, #area-resume .container p {
+    text-shadow: 2px 4px 12px #000;
+}
+
+.city-name {
+    font-size: 2.2em;
+    font-weight: 500;
+    text-shadow: 2px 2px 12px #000;
+}
+
+.region {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.climate p {
+    margin-top: 16px;
+    font-size: 1em;
+}
+
+.climate #climate-icon {
+    margin-top: 8px;
+    height: 4em;
+}
+
+.slide-down {
+    height: auto;
+    text-align: center;
+}
+
+.slide-down i {
+    font-size: 3.2em;
+    animation: slider 1.2s ease-in infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Area Data ----------------------------------- */
+#area-data {
+    background: rgba(110, 110, 110, 0.25);
+    backdrop-filter: blur(22px);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: -6px 2px 90px #000;
+    padding: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100vh;
+}
+
+#area-data nav {
+    margin: 6px;
+}
+
+#area-data h1 {
+    font-weight: normal;
+}
+
+#area-data nav ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    height: 36px;
+    line-height: 36px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Keyframe -------------------------- */
+@keyframes slider {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}

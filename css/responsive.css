@@ -1,0 +1,32 @@
+@media (min-width: 660px) {
+    body {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    header {
+        order: 2;
+        height: 100vh;
+        position: relative;
+    }
+
+    #area-data {
+        background: none;
+        backdrop-filter: none;
+        border-top: 0;
+        box-shadow: none;
+        padding: 0;
+        position: initial;
+    }
+    
+    #area-data p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .slide-down {
+        display: none;
+    }
+}
