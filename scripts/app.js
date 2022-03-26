@@ -98,7 +98,7 @@ function addDOM(object) {
 }
 
 async function getData(city) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=b7a46b1a86bc44e793052452222003&q=${city}&aqi=no&lang=pt`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=b7a46b1a86bc44e793052452222003&q=${city}&aqi=no&lang=pt`;
 
     const request = await fetch(url)
     .then(response => response.json())
