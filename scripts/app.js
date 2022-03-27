@@ -103,8 +103,18 @@ async function getData(city) {
     const request = await fetch(url)
     .then(response => response.json())
     .then(object => object);
-
-    addDOM(request);
+    
+    if(request.error) {
+        if(request.error.code == 1006) {
+            document.querySelector('#area-resume .container').style.display = 'none';
+            document.querySelector('.warning').style.display = 'block';
+        }
+        throw new Error('Erro ao tentar fazer a requisição, código do erro da API: ' + request.error.code);
+    } else {
+        document.querySelector('#area-resume .container').style.display = 'block';
+        document.querySelector('.warning').style.display = 'none';
+        addDOM(request);
+    }
 }
 
 document.querySelectorAll('header nav.cities li').forEach((li) => {
