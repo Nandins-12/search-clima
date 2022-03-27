@@ -111,7 +111,7 @@ async function getData(city) {
         }
         throw new Error('Erro ao tentar fazer a requisição, código do erro da API: ' + request.error.code);
     } else {
-        document.querySelector('#area-resume .container').style.display = 'block';
+        document.querySelector('#area-resume .container').style.display = 'flex';
         document.querySelector('.warning').style.display = 'none';
         addDOM(request);
     }
